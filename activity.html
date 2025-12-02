@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakehouse POS - Activity</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar">JG</div>
+                <div class="user-info">
+                    <span class="user-name">Jelly Grande</span>
+                    <span class="user-role">Cashier</span>
+                </div>
+                <button class="close-btn">&times;</button>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="pos.html" class="nav-item" data-tool="pos">
+                    <i class="icon pos-icon"></i>
+                    <span>Point of Sales</span>
+                </a>
+                <a href="activity.html" class="nav-item active" data-tool="activity">
+                    <i class="icon activity-icon"></i>
+                    <span>Activity</span>
+                </a>
+                <a href="report.html" class="nav-item" data-tool="report">
+                    <i class="icon report-icon"></i>
+                    <span>Report</span>
+                </a>
+                <a href="inventory.html" class="nav-item" data-tool="inventory">
+                    <i class="icon inventory-icon"></i>
+                    <span>Inventory</span>
+                </a>
+                <a href="teams.html" class="nav-item" data-tool="teams">
+                    <i class="icon teams-icon"></i>
+                    <span>Teams</span>
+                </a>
+                <a href="settings.html" class="nav-item" data-tool="settings">
+                    <i class="icon settings-icon"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="log-out">
+                <a href="#" class="log-out-btn">Log Out</a>
+            </div>
+        </aside>
+
+        <main class="main-content activity-page">
+            <header class="topbar">
+                <div class="left-controls">
+                    <button class="menu-toggle-btn">&#9776;</button>
+                    <h2 class="page-title">Activity & Tables</h2>
+                </div>
+                <div class="right-controls">
+                    <div class="date-time">
+                        <span class="date">Wed, 29 May 2024</span>
+                        <span class="time">07:59 AM</span>
+                    </div>
+                    <button class="icon-btn">🔔</button>
+                    <button class="icon-btn refresh-btn">↻</button>
+                </div>
+            </header>
+
+            <div class="activity-body">
+                
+                <div class="activity-controls">
+                    <div class="filters">
+                        <button class="filter-btn active" data-filter="all">All Tables</button>
+                        <button class="filter-btn" data-filter="open">Open (4)</button>
+                        <button class="filter-btn" data-filter="occupied">Occupied (2)</button>
+                        <button class="filter-btn" data-filter="available">Available (8)</button>
+                        <button class="filter-btn" data-filter="reserved">Reserved (1)</button>
+                    </div>
+                    <div class="actions">
+                        <input type="text" class="search-input" placeholder="Search tables or customer names..." />
+                        <button class="add-table-btn">+ Add Table</button>
+                    </div>
+                </div>
+
+                <div class="table-grid">
+                    
+                    <div class="table-card table-status-open" data-table-id="1">
+                        <div class="table-header">
+                            <span class="table-number">Table 01</span>
+                            <span class="table-status">Open Order</span>
+                        </div>
+                        <div class="order-info">
+                            <span class="customer-name">Mike R.</span>
+                            <span class="order-time">Since 10:00 AM</span>
+                        </div>
+                        <div class="order-summary">
+                            <div class="item-count">3 Items</div>
+                            <div class="total-price">$18.50</div>
+                        </div>
+                        <button class="action-btn view-order">View Order</button>
+                    </div>
+
+                    <div class="table-card table-status-occupied" data-table-id="2">
+                        <div class="table-header">
+                            <span class="table-number">Table 02</span>
+                            <span class="table-status">Occupied</span>
+                        </div>
+                        <div class="order-info">
+                            <span class="customer-name">Richard B.</span>
+                            <span class="order-time">Since 08:15 AM</span>
+                        </div>
+                        <div class="order-summary">
+                            <div class="item-count">5 Items</div>
+                            <div class="total-price">$24.00</div>
+                        </div>
+                        <button class="action-btn view-order">View Order</button>
+                    </div>
+
+                    <div class="table-card table-status-available" data-table-id="3">
+                        <div class="table-header">
+                            <span class="table-number">Table 03</span>
+                            <span class="table-status">Available</span>
+                        </div>
+                        <div class="order-info">
+                            <span class="customer-name">Ready for Next</span>
+                            <span class="order-time"></span>
+                        </div>
+                        <button class="action-btn new-order">New Order</button>
+                    </div>
+
+                    <div class="table-card table-status-reserved" data-table-id="4">
+                        <div class="table-header">
+                            <span class="table-number">Table 04</span>
+                            <span class="table-status">Reserved</span>
+                        </div>
+                        <div class="order-info">
+                            <span class="customer-name">Billie S. (11:30 AM)</span>
+                            <span class="order-time">Est. 15 min wait</span>
+                        </div>
+                        <button class="action-btn confirm-reserve">Confirm</button>
+                    </div>
+                    
+                    <div class="table-card table-status-available" data-table-id="5"><div class="table-header"><span class="table-number">Table 05</span><span class="table-status">Available</span></div><div class="order-info"><span class="customer-name">Ready for Next</span><span class="order-time"></span></div><button class="action-btn new-order">New Order</button></div>
+                    <div class="table-card table-status-open" data-table-id="6"><div class="table-header"><span class="table-number">Table 06</span><span class="table-status">Open Order</span></div><div class="order-info"><span class="customer-name">Emily K.</span><span class="order-time">Since 10:45 AM</span></div><div class="order-summary"><div class="item-count">2 Items</div><div class="total-price">$12.00</div></div><button class="action-btn view-order">View Order</button></div>
+                    <div class="table-card table-status-occupied" data-table-id="7"><div class="table-header"><span class="table-number">Table 07</span><span class="table-status">Occupied</span></div><div class="order-info"><span class="customer-name">Sharon L.</span><span class="order-time">Since 07:45 AM</span></div><div class="order-summary"><div class="item-count">7 Items</div><div class="total-price">$35.50</div></div><button class="action-btn view-order">View Order</button></div>
+                    <div class="table-card table-status-available" data-table-id="8"><div class="table-header"><span class="table-number">Table 08</span><span class="table-status">Available</span></div><div class="order-info"><span class="customer-name">Ready for Next</span><span class="order-time"></span></div><button class="action-btn new-order">New Order</button></div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+<script src="scripts.js"></script>
+    </body>
+</html>

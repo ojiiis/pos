@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakehouse POS - Inventory</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar">JG</div>
+                <div class="user-info">
+                    <span class="user-name">Jelly Grande</span>
+                    <span class="user-role">Cashier</span>
+                </div>
+                <button class="close-btn">&times;</button>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="pos.html" class="nav-item" data-tool="pos">
+                    <i class="icon pos-icon"></i>
+                    <span>Point of Sales</span>
+                </a>
+                <a href="activity.html" class="nav-item" data-tool="activity">
+                    <i class="icon activity-icon"></i>
+                    <span>Activity</span>
+                </a>
+                <a href="report.html" class="nav-item" data-tool="report">
+                    <i class="icon report-icon"></i>
+                    <span>Report</span>
+                </a>
+                <a href="inventory.html" class="nav-item active" data-tool="inventory">
+                    <i class="icon inventory-icon"></i>
+                    <span>Inventory</span>
+                </a>
+                <a href="teams.html" class="nav-item" data-tool="teams">
+                    <i class="icon teams-icon"></i>
+                    <span>Teams</span>
+                </a>
+                <a href="settings.html" class="nav-item" data-tool="settings">
+                    <i class="icon settings-icon"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="log-out">
+                <a href="#" class="log-out-btn">Log Out</a>
+            </div>
+        </aside>
+
+        <main class="main-content inventory-page">
+            <header class="topbar">
+                <div class="left-controls">
+                    <button class="menu-toggle-btn">&#9776;</button>
+                    <h2 class="page-title">Inventory Management</h2>
+                </div>
+                <div class="right-controls">
+                    <button class="icon-btn inventory-history-btn">📄</button>
+                    <button class="icon-btn refresh-btn">↻</button>
+                </div>
+            </header>
+
+            <div class="inventory-body">
+                
+                <div class="metric-cards-grid">
+                    <div class="metric-card">
+                        <span class="metric-icon">📦</span>
+                        <div class="metric-info">
+                            <span class="metric-title">Total SKUs</span>
+                            <span class="metric-value">110</span>
+                        </div>
+                        <span class="metric-change positive"></span>
+                    </div>
+
+                    <div class="metric-card">
+                        <span class="metric-icon">📉</span>
+                        <div class="metric-info">
+                            <span class="metric-title">Low Stock Items</span>
+                            <span class="metric-value">8</span>
+                        </div>
+                        <span class="metric-change negative">Action Needed</span>
+                    </div>
+
+                    <div class="metric-card">
+                        <span class="metric-icon">💲</span>
+                        <div class="metric-info">
+                            <span class="metric-title">Inventory Value (Cost)</span>
+                            <span class="metric-value">$15,400.00</span>
+                        </div>
+                        <span class="metric-change positive"></span>
+                    </div>
+
+                    <div class="metric-card">
+                        <span class="metric-icon">🔄</span>
+                        <div class="metric-info">
+                            <span class="metric-title">Last Restock</span>
+                            <span class="metric-value">May 28th</span>
+                        </div>
+                        <span class="metric-change negative"></span>
+                    </div>
+                </div>
+
+                <div class="inventory-controls">
+                    <div class="filters">
+                        <select class="select-field category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="breads">Breads</option>
+                            <option value="cakes">Cakes</option>
+                            <option value="donuts">Donuts</option>
+                            <option value="pastries">Pastries</option>
+                        </select>
+                        <select class="select-field status-filter">
+                            <option value="all">All Statuses</option>
+                            <option value="low">Low Stock</option>
+                            <option value="in-stock">In Stock</option>
+                            <option value="out-of-stock">Out of Stock</option>
+                        </select>
+                    </div>
+                    <div class="actions">
+                        <input type="text" class="search-input" placeholder="Search item name or SKU..." />
+                        <button class="add-item-btn">+ Add New Item</button>
+                        <button class="receive-goods-btn">Receive Goods</button>
+                    </div>
+                </div>
+
+                <div class="detailed-inventory-section">
+                    <div class="table-container">
+                        <table class="inventory-table">
+                            <thead>
+                                <tr>
+                                    <th>SKU</th>
+                                    <th>Item Name</th>
+                                    <th>Category</th>
+                                    <th>Retail Price</th>
+                                    <th>Cost Price</th>
+                                    <th>Stock Level</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="SKU">B001</td>
+                                    <td data-label="Item Name">Beef Crowich</td>
+                                    <td data-label="Category">Sandwich</td>
+                                    <td data-label="Retail Price">$5.50</td>
+                                    <td data-label="Cost Price">$3.00</td>
+                                    <td data-label="Stock Level">145</td>
+                                    <td data-label="Status" class="status-in-stock">In Stock</td>
+                                    <td data-label="Actions"><button class="action-edit">Edit</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="SKU">P002</td>
+                                    <td data-label="Item Name">Buttermelt Croissant</td>
+                                    <td data-label="Category">Pastry</td>
+                                    <td data-label="Retail Price">$4.00</td>
+                                    <td data-label="Cost Price">$2.10</td>
+                                    <td data-label="Stock Level">22</td>
+                                    <td data-label="Status" class="status-low-stock">Low Stock</td>
+                                    <td data-label="Actions"><button class="action-edit">Edit</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="SKU">D003</td>
+                                    <td data-label="Item Name">Cereal Cream Donut</td>
+                                    <td data-label="Category">Donut</td>
+                                    <td data-label="Retail Price">$2.45</td>
+                                    <td data-label="Cost Price">$1.20</td>
+                                    <td data-label="Stock Level">89</td>
+                                    <td data-label="Status" class="status-in-stock">In Stock</td>
+                                    <td data-label="Actions"><button class="action-edit">Edit</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="SKU">C004</td>
+                                    <td data-label="Item Name">Cheesy Cheesecake</td>
+                                    <td data-label="Category">Cake</td>
+                                    <td data-label="Retail Price">$3.75</td>
+                                    <td data-label="Cost Price">$2.00</td>
+                                    <td data-label="Stock Level">0</td>
+                                    <td data-label="Status" class="status-out-of-stock">Out of Stock</td>
+                                    <td data-label="Actions"><button class="action-edit">Edit</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+ <script src="scripts.js"></script>
+    </body>
+</html>

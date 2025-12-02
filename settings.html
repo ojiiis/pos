@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakehouse POS - Settings</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar">JG</div>
+                <div class="user-info">
+                    <span class="user-name">Jelly Grande</span>
+                    <span class="user-role">Cashier</span>
+                </div>
+                <button class="close-btn">&times;</button>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="pos.html" class="nav-item" data-tool="pos">
+                    <i class="icon pos-icon"></i>
+                    <span>Point of Sales</span>
+                </a>
+                <a href="activity.html" class="nav-item" data-tool="activity">
+                    <i class="icon activity-icon"></i>
+                    <span>Activity</span>
+                </a>
+                <a href="report.html" class="nav-item" data-tool="report">
+                    <i class="icon report-icon"></i>
+                    <span>Report</span>
+                </a>
+                <a href="inventory.html" class="nav-item" data-tool="inventory">
+                    <i class="icon inventory-icon"></i>
+                    <span>Inventory</span>
+                </a>
+                <a href="teams.html" class="nav-item" data-tool="teams">
+                    <i class="icon teams-icon"></i>
+                    <span>Teams</span>
+                </a>
+                <a href="settings.html" class="nav-item active" data-tool="settings">
+                    <i class="icon settings-icon"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="log-out">
+                <a href="#" class="log-out-btn">Log Out</a>
+            </div>
+        </aside>
+
+        <main class="main-content settings-page">
+            <header class="topbar">
+                <div class="left-controls">
+                    <button class="menu-toggle-btn">&#9776;</button>
+                    <h2 class="page-title">System Settings</h2>
+                </div>
+                <div class="right-controls">
+                    <button class="icon-btn help-btn">❓</button>
+                    <button class="icon-btn save-btn">💾</button>
+                </div>
+            </header>
+
+            <div class="settings-body">
+                
+                <aside class="settings-nav">
+                    <a href="#general" class="setting-nav-item active" data-setting="general">
+                        <i class="icon">⚙️</i> General
+                    </a>
+                    <a href="#taxes" class="setting-nav-item" data-setting="taxes">
+                        <i class="icon">🧾</i> Taxes & Fees
+                    </a>
+                    <a href="#payments" class="setting-nav-item" data-setting="payments">
+                        <i class="icon">💳</i> Payment Gateways
+                    </a>
+                    <a href="#devices" class="setting-nav-item" data-setting="devices">
+                        <i class="icon">🖨️</i> Devices & Hardware
+                    </a>
+                    <a href="#receipts" class="setting-nav-item" data-setting="receipts">
+                        <i class="icon">📄</i> Receipt Templates
+                    </a>
+                </aside>
+
+                <div class="settings-content-area">
+
+                    <section id="general" class="setting-section active">
+                        <h3>General Business Information</h3>
+                        <form class="setting-form">
+                            <div class="form-group">
+                                <label for="business-name">Business Name</label>
+                                <input type="text" id="business-name" value="Bakehouse Bakery" />
+                            </div>
+                            <div class="form-group">
+                                <label for="currency">Default Currency</label>
+                                <select id="currency">
+                                    <option>USD ($)</option>
+                                    <option>EUR (€)</option>
+                                    <option>GBP (£)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="timezone">Time Zone</label>
+                                <input type="text" id="timezone" value="Africa/Lagos (WAT)" />
+                            </div>
+                            <div class="form-group toggle-group">
+                                <label>Enable Table Management (Dine-in)</label>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </form>
+                    </section>
+
+                    <section id="taxes" class="setting-section">
+                        <h3>Taxes & Regulatory Fees</h3>
+                        <div class="setting-item-list">
+                            <div class="setting-item">
+                                <h4>Sales Tax (VAT)</h4>
+                                <span class="setting-value">10.0%</span>
+                                <button class="action-edit">Edit</button>
+                            </div>
+                            <div class="setting-item">
+                                <h4>Service Fee (Dine-in)</h4>
+                                <span class="setting-value">5.0%</span>
+                                <button class="action-edit">Edit</button>
+                            </div>
+                            <button class="add-tax-btn">+ Add New Tax</button>
+                        </div>
+                    </section>
+
+                    <section id="devices" class="setting-section">
+                        <h3>Connected Hardware</h3>
+                        <div class="setting-item-list">
+                            <div class="setting-item">
+                                <h4>POS Terminal (Main)</h4>
+                                <span class="setting-value status-connected">Connected (IP: 192.168.1.10)</span>
+                                <button class="action-edit">Configure</button>
+                            </div>
+                            <div class="setting-item">
+                                <h4>Kitchen Printer (BOH)</h4>
+                                <span class="setting-value status-error">Offline</span>
+                                <button class="action-edit">Troubleshoot</button>
+                            </div>
+                            <button class="add-device-btn">+ Add Device</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+<script src="scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakehouse POS - Shift Management</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <div class="shift-management-container">
+        
+        <header class="shift-header">
+            <h1 class="shift-title">Shift Management</h1>
+            <div class="user-display">
+                <span class="shift-user-name">Jelly Grande (Cashier)</span>
+                <span class="shift-date">Tuesday, December 2, 2025</span>
+            </div>
+        </header>
+
+        <main class="shift-content">
+
+            <section class="time-clock-section">
+                <h2>Time Clock</h2>
+                <div class="clock-display">
+                    <span id="current-time">12:10:46 AM</span>
+                </div>
+                <div class="punch-buttons">
+                    <button class="action-btn punch-btn clock-in-btn">Clock In</button>
+                    <button class="action-btn punch-btn clock-out-btn disabled">Clock Out</button>
+                    <button class="action-btn punch-btn start-break-btn disabled">Start Break</button>
+                    <button class="action-btn punch-btn end-break-btn disabled">End Break</button>
+                </div>
+                <div class="shift-status-message">
+                    <p id="shift-status">Status: Off Shift. Clock in to begin your day.</p>
+                </div>
+            </section>
+            
+            <section class="cash-management-section">
+                <h2>Cash Drawer Management</h2>
+                <div class="cash-summary-card">
+                    <div class="cash-metric">
+                        <span class="metric-label">Current Cash Float</span>
+                        <span class="metric-value" id="cash-float">$0.00</span>
+                    </div>
+                    <div class="cash-metric">
+                        <span class="metric-label">Expected Drawer Total</span>
+                        <span class="metric-value" id="expected-total">$0.00</span>
+                    </div>
+                </div>
+
+                <div class="cash-actions">
+                    <button class="action-btn primary-action open-drawer-btn">Open Drawer</button>
+                    <button class="action-btn secondary-action declare-tips-btn">Declare Tips</button>
+                    <button class="action-btn primary-action end-shift-btn disabled">End Shift & Count Drawer</button>
+                </div>
+            </section>
+            
+            <section class="shift-history-section">
+                <h2>Recent Activity</h2>
+                <div class="history-list">
+                    <p>No shift activity recorded for today yet.</p>
+                    </div>
+            </section>
+
+        </main>
+        
+        <footer class="shift-footer">
+            <a href="pos.html"><button class="action-btn back-to-pos-btn">Back to POS</button></a>
+        </footer>
+
+    </div>
+ <script src="scripts.js"></script>
+    </body>
+</html>

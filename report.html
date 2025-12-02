@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakehouse POS - Reports</title>
+     <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar">JG</div>
+                <div class="user-info">
+                    <span class="user-name">Jelly Grande</span>
+                    <span class="user-role">Cashier</span>
+                </div>
+                <button class="close-btn">&times;</button>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="pos.html" class="nav-item" data-tool="pos">
+                    <i class="icon pos-icon"></i>
+                    <span>Point of Sales</span>
+                </a>
+                <a href="activity.html" class="nav-item" data-tool="activity">
+                    <i class="icon activity-icon"></i>
+                    <span>Activity</span>
+                </a>
+                <a href="report.html" class="nav-item active" data-tool="report">
+                    <i class="icon report-icon"></i>
+                    <span>Report</span>
+                </a>
+                <a href="inventory.html" class="nav-item" data-tool="inventory">
+                    <i class="icon inventory-icon"></i>
+                    <span>Inventory</span>
+                </a>
+                <a href="teams.html" class="nav-item" data-tool="teams">
+                    <i class="icon teams-icon"></i>
+                    <span>Teams</span>
+                </a>
+                <a href="settings.html" class="nav-item" data-tool="settings">
+                    <i class="icon settings-icon"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="log-out">
+                <a href="#" class="log-out-btn">Log Out</a>
+            </div>
+        </aside>
+
+        <main class="main-content report-page">
+            <header class="topbar">
+                <div class="left-controls">
+                    <button class="menu-toggle-btn">&#9776;</button>
+                    <h2 class="page-title">Sales Reports</h2>
+                </div>
+                <div class="right-controls">
+                    <div class="date-range-selector">
+                        <select class="select-field">
+                            <option value="today">Today</option>
+                            <option value="week">Last 7 Days</option>
+                            <option value="month" selected>This Month</option>
+                            <option value="custom">Custom Range</option>
+                        </select>
+                    </div>
+                    <button class="icon-btn refresh-btn">↻</button>
+                    <button class="icon-btn download-btn">⬇️</button>
+                </div>
+            </header>
+
+            <div class="report-body">
+                
+                <div class="metric-cards-grid">
+                    <div class="metric-card">
+                        <span class="metric-icon">💰</span>
+                        <div class="metric-info">
+                            <span class="metric-title">Total Revenue</span>
+                            <span class="metric-value">$8,520.45</span>
+                        </div>
+                        <span class="metric-change positive">▲ 12.5%</span>
+                    </div>
+
+                    <div class="metric-card">
+                        <span class="metric-icon">🛒</span>
+                        <div class="metric-info">
+                            <span class="metric-title">Orders Completed</span>
+                            <span class="metric-value">1,240</span>
+                        </div>
+                        <span class="metric-change positive">▲ 5.2%</span>
+                    </div>
+
+                    <div class="metric-card">
+                        <span class="metric-icon">👤</span>
+                        <div class="metric-info">
+                            <span class="metric-title">New Customers</span>
+                            <span class="metric-value">450</span>
+                        </div>
+                        <span class="metric-change negative">▼ 2.1%</span>
+                    </div>
+
+                    <div class="metric-card">
+                        <span class="metric-icon">🍰</span>
+                        <div class="metric-info">
+                            <span class="metric-title">Best Selling Item</span>
+                            <span class="metric-value">Choc. Croissant</span>
+                        </div>
+                        <span class="metric-change positive">▲ 18 units</span>
+                    </div>
+                </div>
+
+                <div class="charts-section">
+                    <div class="chart-box sales-chart">
+                        <h3 class="chart-title">Monthly Sales Trend</h3>
+                        <div class="chart-placeholder">
+                            
+
+[Image of Line/Bar Chart showing sales over time]
+
+                        </div>
+                    </div>
+
+                    <div class="chart-box top-items-chart">
+                        <h3 class="chart-title">Top 5 Best Sellers</h3>
+                        <div class="chart-placeholder">
+                             
+
+[Image of Horizontal Bar Chart showing product ranking]
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detailed-report-section">
+                    <h3 class="section-title">Latest Transactions</h3>
+                    <div class="table-container">
+                        <table class="transaction-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date/Time</th>
+                                    <th>Items</th>
+                                    <th>Payment Method</th>
+                                    <th>Total Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Order ID">#001245</td>
+                                    <td data-label="Date/Time">29 May, 10:45 AM</td>
+                                    <td data-label="Items">4 Items</td>
+                                    <td data-label="Payment Method">Credit Card</td>
+                                    <td data-label="Total Amount">$24.50</td>
+                                    <td data-label="Status" class="status-complete">Complete</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Order ID">#001244</td>
+                                    <td data-label="Date/Time">29 May, 10:30 AM</td>
+                                    <td data-label="Items">2 Items</td>
+                                    <td data-label="Payment Method">Cash</td>
+                                    <td data-label="Total Amount">$12.00</td>
+                                    <td data-label="Status" class="status-complete">Complete</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Order ID">#001243</td>
+                                    <td data-label="Date/Time">29 May, 10:15 AM</td>
+                                    <td data-label="Items">7 Items</td>
+                                    <td data-label="Payment Method">Mobile Pay</td>
+                                    <td data-label="Total Amount">$35.50</td>
+                                    <td data-label="Status" class="status-complete">Complete</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Order ID">#001242</td>
+                                    <td data-label="Date/Time">29 May, 10:00 AM</td>
+                                    <td data-label="Items">3 Items</td>
+                                    <td data-label="Payment Method">Credit Card</td>
+                                    <td data-label="Total Amount">$18.50</td>
+                                    <td data-label="Status" class="status-complete">Complete</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+ <script src="scripts.js"></script>
+    </body>
+</html>

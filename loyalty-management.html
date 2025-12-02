@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakehouse POS - Reports</title>
+     <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar">JG</div>
+                <div class="user-info">
+                    <span class="user-name">Jelly Grande</span>
+                    <span class="user-role">Cashier</span>
+                </div>
+                <button class="close-btn">&times;</button>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="pos.html" class="nav-item" data-tool="pos">
+                    <i class="icon pos-icon"></i>
+                    <span>Point of Sales</span>
+                </a>
+                <a href="activity.html" class="nav-item" data-tool="activity">
+                    <i class="icon activity-icon"></i>
+                    <span>Activity</span>
+                </a>
+                <a href="report.html" class="nav-item active" data-tool="report">
+                    <i class="icon report-icon"></i>
+                    <span>Report</span>
+                </a>
+                <a href="inventory.html" class="nav-item" data-tool="inventory">
+                    <i class="icon inventory-icon"></i>
+                    <span>Inventory</span>
+                </a>
+                <a href="teams.html" class="nav-item" data-tool="teams">
+                    <i class="icon teams-icon"></i>
+                    <span>Teams</span>
+                </a>
+                <a href="settings.html" class="nav-item" data-tool="settings">
+                    <i class="icon settings-icon"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="log-out">
+                <a href="#" class="log-out-btn">Log Out</a>
+            </div>
+        </aside>
+
+     <main class="main-content customer-page">
+    <header class="topbar">
+        <div class="left-controls">
+            <button class="menu-toggle-btn">&#9776;</button>
+            <h2 class="page-title">Customer & Loyalty Management</h2>
+        </div>
+        <div class="right-controls">
+            <button class="icon-btn refresh-btn">↻</button>
+            <button class="icon-btn campaign-btn">🎯</button>
+        </div>
+    </header>
+
+    <div class="customer-body">
+        
+        <div class="metric-cards-grid">
+            <div class="metric-card">
+                <span class="metric-icon">👥</span>
+                <div class="metric-info">
+                    <span class="metric-title">Total Loyalty Members</span>
+                    <span class="metric-value">2,150</span>
+                </div>
+                <span class="metric-change positive">▲ 8% MoM</span>
+            </div>
+
+            <div class="metric-card">
+                <span class="metric-icon">🎁</span>
+                <div class="metric-info">
+                    <span class="metric-title">Rewards Redeemed</span>
+                    <span class="metric-value">120</span>
+                </div>
+                <span class="metric-change positive"></span>
+            </div>
+
+            <div class="metric-card">
+                <span class="metric-icon">💲</span>
+                <div class="metric-info">
+                    <span class="metric-title">Avg. Member Spend</span>
+                    <span class="metric-value">$18.50</span>
+                </div>
+                <span class="metric-change positive">▲ $0.50</span>
+            </div>
+
+            <div class="metric-card">
+                <span class="metric-icon">🎂</span>
+                <div class="metric-info">
+                    <span class="metric-title">Upcoming Birthdays</span>
+                    <span class="metric-value">5 Today</span>
+                </div>
+                <span class="metric-change negative"></span>
+            </div>
+        </div>
+
+        <div class="customer-controls">
+            <div class="filters">
+                <select class="select-field tier-filter">
+                    <option value="all">All Tiers</option>
+                    <option value="gold">Gold Tier</option>
+                    <option value="silver">Silver Tier</option>
+                    <option value="bronze">Bronze Tier</option>
+                </select>
+                <select class="select-field status-filter">
+                    <option value="active">Active</option>
+                    <option value="pending">Pending Rewards</option>
+                </select>
+            </div>
+            <div class="actions">
+                <input type="text" class="search-input" placeholder="Search customer name, phone, or email..." />
+                <button class="add-customer-btn">+ Add Customer</button>
+            </div>
+        </div>
+
+        <div class="detailed-customer-section">
+            <div class="table-container">
+                <table class="customer-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Tier</th>
+                            <th>Points</th>
+                            <th>Total Spent</th>
+                            <th>Last Visit</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="ID">C1001</td>
+                            <td data-label="Name">Sarah Johnson</td>
+                            <td data-label="Tier">Gold</td>
+                            <td data-label="Points">1,250</td>
+                            <td data-label="Total Spent">$550.00</td>
+                            <td data-label="Last Visit">Today</td>
+                            <td data-label="Actions"><button class="action-view">View</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID">C1002</td>
+                            <td data-label="Name">David Lee</td>
+                            <td data-label="Tier">Silver</td>
+                            <td data-label="Points">480</td>
+                            <td data-label="Total Spent">$185.00</td>
+                            <td data-label="Last Visit">May 25</td>
+                            <td data-label="Actions"><button class="action-view">View</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID">C1003</td>
+                            <td data-label="Name">Emily Rodriguez</td>
+                            <td data-label="Tier">Bronze</td>
+                            <td data-label="Points">150</td>
+                            <td data-label="Total Spent">$75.50</td>
+                            <td data-label="Last Visit">May 10</td>
+                            <td data-label="Actions"><button class="action-view">View</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+    </div>
+
+ <script src="scripts.js"></script>
+    </body>
+</html>

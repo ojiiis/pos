@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakehouse POS System</title>
+      <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar">JG</div>
+                <div class="user-info">
+                    <span class="user-name">Jelly Grande</span>
+                    <span class="user-role">Cashier</span>
+                </div>
+                <button class="close-btn">&times;</button>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="#" class="nav-item active" data-tool="pos">
+                    <i class="icon pos-icon"></i>
+                    <span>Point of Sales</span>
+                </a>
+                <a href="activity.html" class="nav-item" data-tool="activity">
+                    <i class="icon activity-icon"></i>
+                    <span>Activity</span>
+                </a>
+                <a href="report.html" class="nav-item" data-tool="report">
+                    <i class="icon report-icon"></i>
+                    <span>Report</span>
+                </a>
+                <a href="inventory.html" class="nav-item" data-tool="inventory">
+                    <i class="icon inventory-icon"></i>
+                    <span>Inventory</span>
+                </a>
+                <a href="teams.html" class="nav-item" data-tool="teams">
+                    <i class="icon teams-icon"></i>
+                    <span>Teams</span>
+                </a>
+                <a href="settings.html" class="nav-item" data-tool="settings">
+                    <i class="icon settings-icon"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="log-out">
+                <a href="#" class="log-out-btn">Log Out</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="left-controls">
+                    <button class="menu-toggle-btn">&#9776;</button>
+                    <div class="date-time">
+                        <span class="date">Wed, 29 May 2024</span>
+                        <span class="time">07:59 AM</span>
+                    </div>
+                    <div class="order-status open">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Open Order</span>
+                    </div>
+                </div>
+                <div class="right-controls">
+                    <a href="shift-managment.html"><button class="icon-btn">📅</button></a>
+                    <button class="icon-btn">🔔</button>
+                    <button class="icon-btn">⚙️</button>
+                    <button class="icon-btn refresh-btn">↻</button>
+                </div>
+            </header>
+
+            <div class="pos-body">
+                <section class="menu-panel">
+                    <div class="menu-categories">
+                        <button class="category active">
+                            <i class="icon"></i>
+                            <span>All Menu</span>
+                            <small>110 Items</small>
+                        </button>
+                        <button class="category">
+                            <i class="icon"></i>
+                            <span>Breads</span>
+                            <small>20 Items</small>
+                        </button>
+                        <button class="category">
+                            <i class="icon"></i>
+                            <span>Cakes</span>
+                            <small>20 Items</small>
+                        </button>
+                        <button class="category">
+                            <i class="icon"></i>
+                            <span>Donuts</span>
+                            <small>20 Items</small>
+                        </button>
+                        <button class="category">
+                            <i class="icon"></i>
+                            <span>Pastries</span>
+                            <small>20 Items</small>
+                        </button>
+                        <button class="category">
+                            <i class="icon"></i>
+                            <span>Sandwich</span>
+                            <small>20 Items</small>
+                        </button>
+                    </div>
+
+                    <div class="product-selection">
+                        <div class="search-bar">
+                            <input type="text" placeholder="Search something sweet on your mind..." />
+                            <i class="search-icon">🔍</i>
+                        </div>
+                        
+                        <div class="product-grid">
+                            <div class="product-card" data-product-id="1">
+                                <img src="images/beef-crowich.jpg" alt="Beef Crowich" />
+                                <span class="product-tag">Sandwich</span>
+                                <div class="product-info">
+                                    <span class="product-name">Beef Crowich</span>
+                                    <span class="product-price">$5.50</span>
+                                </div>
+                            </div>
+                            <div class="product-card" data-product-id="2">
+                                <img src="images/buttermilk-croissant.jpg" alt="Buttermelt Croissant" />
+                                <span class="product-tag">Pastry</span>
+                                <div class="product-info">
+                                    <span class="product-name">Buttermelt Croissant</span>
+                                    <span class="product-price">$4.00</span>
+                                </div>
+                            </div>
+                            <div class="product-card" data-product-id="3">
+                                <img src="images/cereal-cream-donut.jpg" alt="Cereal Cream Donut" />
+                                <span class="product-tag">Donut</span>
+                                <div class="product-info">
+                                    <span class="product-name">Cereal Cream Donut</span>
+                                    <span class="product-price">$2.45</span>
+                                </div>
+                            </div>
+                            <div class="product-card" data-product-id="4">
+                                <img src="images/cheesy-cheesecake.jpg" alt="Cheesy Cheesecake" />
+                                <span class="product-tag">Cake</span>
+                                <div class="product-info">
+                                    <span class="product-name">Cheesy Cheesecake</span>
+                                    <span class="product-price">$3.75</span>
+                                </div>
+                            </div>
+                            <div class="product-card" data-product-id="5">
+                                <img src="images/cheezy-sourdough.jpg" alt="Cheezy Sourdough" />
+                                <span class="product-tag">Bread</span>
+                                <div class="product-info">
+                                    <span class="product-name">Cheezy Sourdough</span>
+                                    <span class="product-price">$4.50</span>
+                                </div>
+                            </div>
+                            <div class="product-card" data-product-id="6">
+                                <img src="images/egg-tart.jpg" alt="Egg Tart" />
+                                <span class="product-tag">Tart</span>
+                                <div class="product-info">
+                                    <span class="product-name">Egg Tart</span>
+                                    <span class="product-price">$3.25</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="active-orders-queue">
+                        <div class="track-order-btn">Track Order <i class="icon"></i></div>
+                        <div class="order-item active">
+                            <span class="customer-name">Mike</span>
+                            <span class="order-details">Table 04 • Dine In</span>
+                            <span class="order-time">10:00 AM</span>
+                            <span class="status">On Kitchen Hand</span>
+                        </div>
+                        <div class="order-item">
+                            <span class="customer-name">Billie</span>
+                            <span class="order-details">Table 03 • Take Away</span>
+                            <span class="order-time">08:45 AM</span>
+                            <span class="status">All Done</span>
+                        </div>
+                        <div class="order-item">
+                            <span class="customer-name">Richard</span>
+                            <span class="order-details">Table 02 • Dine In</span>
+                            <span class="order-time">08:15 AM</span>
+                            <span class="status">To be Served</span>
+                        </div>
+                        <div class="order-item">
+                            <span class="customer-name">Sharon</span>
+                            <span class="order-details">Table 01 • Dine In</span>
+                            <span class="order-time">08:45 AM</span>
+                            <span class="status">All Done</span>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="order-summary-panel">
+                    <div class="order-header">
+                        <div class="order-title">
+                            <span class="customer-name">Eloise's Order</span>
+                            <span class="order-number">Order Number #005</span>
+                        </div>
+                        <button class="edit-btn">✏️</button>
+                    </div>
+
+                    <div class="order-table-type">
+                        <select class="select-field table-select">
+                            <option>Table 05</option>
+                        </select>
+                        <select class="select-field type-select">
+                            <option>Dine In</option>
+                        </select>
+                        <button class="add-item-btn">+</button>
+                    </div>
+
+                    <div class="order-items-list">
+                        <div class="order-item-detail" data-item-id="1" data-price="5.50">
+                            <img src="images/beef-crowich-small.jpg" alt="Beef Crowich" />
+                            <div class="item-info">
+                                <span class="item-name">Beef Crowich</span>
+                                <span class="item-price">$5.50</span>
+                            </div>
+                            <div class="item-quantity-control">
+                                <button class="qty-minus">-</button>
+                                <span class="item-qty" data-qty="1">1</span>
+                                <button class="qty-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="order-item-detail" data-item-id="2" data-price="5.00">
+                            <img src="images/sliced-black-forest-small.jpg" alt="Sliced Black Forest" />
+                            <div class="item-info">
+                                <span class="item-name">Sliced Black Forest</span>
+                                <span class="item-price">$5.00</span>
+                            </div>
+                            <div class="item-quantity-control">
+                                <button class="qty-minus">-</button>
+                                <span class="item-qty" data-qty="2">2</span>
+                                <button class="qty-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="order-item-detail" data-item-id="3" data-price="4.50">
+                            <img src="images/solo-floss-bread-small.jpg" alt="Solo Floss Bread" />
+                            <div class="item-info">
+                                <span class="item-name">Solo Floss Bread</span>
+                                <span class="item-price">$4.50</span>
+                            </div>
+                            <div class="item-quantity-control">
+                                <button class="qty-minus">-</button>
+                                <span class="item-qty" data-qty="1">1</span>
+                                <button class="qty-plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-footer">
+                        <div class="totals-table">
+                            <div class="total-row">
+                                <span>Subtotal</span>
+                                <span class="amount-display">$20.00</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Tax (10%)</span>
+                                <span class="amount-display">$2.00</span>
+                            </div>
+                            <div class="total-row discount-row">
+                                <span>Discount</span>
+                                <span class="amount-display">- $1.00</span>
+                            </div>
+                            <div class="total-row grand-total">
+                                <span>TOTAL</span>
+                                <span class="amount-display total-amount">$21.00</span>
+                            </div>
+                        </div>
+
+                        <div class="promo-voucher">
+                            <input type="text" placeholder="Add Promo or Voucher" />
+                            <button class="gris-btn">GRIS</button>
+                        </div>
+
+                        <button class="place-order-btn">Place Order</button>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <div class="modal-overlay" id="productDetailModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Detail Menu</h3>
+                    <button class="close-modal-btn">&times;</button>
+                </div>
+                <div class="detail-menu">
+                    <div class="detail-left">
+                        <img src="images/buttermilk-croissant.jpg" alt="Product Image" class="detail-img"/>
+                        <span class="detail-tag">Pastry</span>
+                        <span class="detail-price">$4.00</span>
+                    </div>
+                    <div class="detail-right">
+                        <h3 class="detail-name">Buttermelt Croissant</h3>
+                        <p class="detail-description">Premium butter croissant with a crispy pastry crust and soft inside will melt away on your mouth!</p>
+                        <textarea class="notes-input" placeholder="Add notes to your order..."></textarea>
+                        
+                        <div class="detail-quantity-control">
+                            <button class="qty-minus">-</button>
+                            <input type="number" value="1" min="1" class="detail-qty-input"/>
+                            <button class="qty-plus">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart ($4.00)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<script src="scripts.js"></script>
+    </body>
+</html>
